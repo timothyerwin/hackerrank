@@ -39,7 +39,7 @@ function minimumSwaps(array) {
        dictionary.push([array[i], i]);
     }
     
-    // Sort the array based on the second element
+    // Sort the array based on where the original array values should be
     dictionary.sort((first, second) => first[0] - second[0]);
     
     for(let k = 0; k < array.length; k++) {
