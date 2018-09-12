@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/queue-using-two-stacks/problem
+
 class Queue {
     constructor() {
         this.stack1 = [];
