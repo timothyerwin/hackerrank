@@ -42,9 +42,11 @@ function makeAnagram(a, b) {
     let count = 0;
     let freq = new Array(26).fill(0);
 
-    for (let c of a) { freq[c.charCodeAt(0) - 'a'.charCodeAt(0)] += 1; }
-    for (let c of b) { freq[c.charCodeAt(0) - 'a'.charCodeAt(0)] -= 1; }
-    for(let v of freq) { count += Math.abs(v); }
+    const inc = (c, i) => freq[c.charCodeAt(0) - 'a'.charCodeAt(0)] += i;
+
+    for (let c of a) inc(c, 1);
+    for (let c of b) inc(c, -1);
+    for (let v of freq) count += Math.abs(v);
     
     return count;
 }
