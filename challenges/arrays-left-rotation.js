@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/array-left-rotation/problem
+
 'use strict';
 
 const fs = require('fs');
