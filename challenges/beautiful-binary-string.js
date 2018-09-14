@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/challenges/beautiful-binary-string/problem
 // adapted from a comment in the discussions
 
 'use strict';
