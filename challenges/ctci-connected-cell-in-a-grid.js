@@ -41,7 +41,7 @@ function maxRegion(grid) {
     } 
 
     
-    const total = Math.max.apply(null, counts);
+    const total = Math.max(...counts);
 
     return total;
 }
