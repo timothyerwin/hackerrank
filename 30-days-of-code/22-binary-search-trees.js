@@ -53,10 +53,7 @@ function BinarySearchTree() {
             return Math.max(left, right);
         }
 
-        let max = iterate(root);
-
-        return max;
-
+        return iterate(root);
     }; // End of function getHeight
 }; // End of function BinarySearchTree
 
