@@ -35,25 +35,18 @@ function BinarySearchTree() {
     
     // Start of function getHeight
     this.getHeight = function(root) {
-        // Add your code here
-        const iterate = node => {
-            let left = 0;
-            let right = 0;
+        let left = 0;
+        let right = 0;
 
-            if (node.left) {
-                left += 1;
-                left += iterate(node.left);
-            }
-
-            if (node.right) {
-                right += 1;
-                right += iterate(node.right);
-            }
-
-            return Math.max(left, right);
+        if (root.left) {
+            left += 1 + this.getHeight(root.left);
         }
 
-        return iterate(root);
+        if (root.right) {
+            right += 1 + this.getHeight(root.right);
+        }
+
+        return Math.max(left, right);
     }; // End of function getHeight
 }; // End of function BinarySearchTree
 
